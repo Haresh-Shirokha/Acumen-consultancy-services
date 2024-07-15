@@ -1,4 +1,3 @@
-
 traffic_light = "Green"
 speed_limit = 60
 
