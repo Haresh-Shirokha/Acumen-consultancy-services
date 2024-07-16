@@ -1,34 +1,30 @@
-traffic_light = "Green"
-speed_limit = 60
+traffic_light='green'
 
-class Vehicle:
+speed_limit=60
+class vehicle:
     def start_engine(self):
-        print("Engine started.")
-
-class Car(Vehicle):
-    def __init__(self, a):
-        self.a = a
-    def start_engine(self):
-        message = "Car engine is started."
+        message="Engine started"    
         print(message)
 
-class Bike(Vehicle):
-    def __init__(self, bike_type):
-        self.type = bike_type
-
+class car(vehicle):
+    def __init__(self,make):
+        self.make=make
     def start_engine(self):
-        message = "Bike engine started."
+        message="Car engine started"    
         print(message)
 
-if __name__ == "__main__":
-    print(f"traffic_light:- {traffic_light}")
-    print(f"speed_limit:- {speed_limit}")
-
-    car = Car("Toyota")
-    bike = Bike("Mountain")
-
-    print(f"Car made: {car.a}")
-    car.start_engine()
-
-    print(f"Bike type: {bike.type}")
-    bike.start_engine()
+class bike(vehicle):
+    def __init__(self,type):
+        self.type=type
+    def start_engine(self):
+        message="bike engine started"    
+        print(message)
+        
+obj=vehicle()
+obj1=car("toyota")
+obj2=bike("super bike")
+obj.start_engine()
+obj1.start_engine()
+obj2.start_engine()
+print(obj1.make)
+print(obj2.type)
